@@ -1,0 +1,92 @@
+/**
+ * ============================================================================
+ * ⚡ AXISSALUD - Estilos Globales (Independiente)
+ * ============================================================================
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 10% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 10% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 10% 12%;
+
+    --primary: 180 65% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 10% 97%;
+    --secondary-foreground: 220 10% 12%;
+
+    --muted: 220 10% 96%;
+    --muted-foreground: 220 8% 46%;
+
+    --accent: 180 65% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 180 65% 40%;
+
+    --radius: 0.75rem;
+
+    --font-main: 'Inter', system-ui, sans-serif;
+  }
+
+  .dark {
+    --background: 220 15% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 15% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 15% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 180 65% 50%;
+    --primary-foreground: 220 15% 8%;
+
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 8% 60%;
+
+    --accent: 180 65% 50%;
+    --accent-foreground: 220 15% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 180 65% 50%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .section-spacing { @apply py-16 md:py-24; }
+  .container-narrow { @apply max-w-4xl mx-auto px-6; }
+  .container-wide { @apply max-w-7xl mx-auto px-6; }
+}
